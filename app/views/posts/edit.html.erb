@@ -5,10 +5,10 @@
 
   <%= f.label :text %>
   <%= f.text_field :text %>
-
   <%= f.submit %>
 <% end %>
 
- <%= form_tag post_path(@post), method: "delete" do %>
- <%= submit_tag "Delete post" %>
- <%end%>
+<%= form_tag post_path(@post), method: "delete" do %><br>
+<%= submit_tag "Delete post" %><br>
+<br><%= link_to 'go back to create new post', new_post_path(@post) %></br>
+<%end%>

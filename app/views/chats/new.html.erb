@@ -1,0 +1,13 @@
+<h1>add chatroom with topic</h1>
+<%= form_for @chat do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  </br>
+  <br>
+  <%= f.label :topic %>
+  <%= f.text_area :topic %>
+  </br>
+  <%= f.submit "add" %>
+</p>
+<%end%>

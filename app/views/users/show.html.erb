@@ -1,5 +1,8 @@
-<h2>Welcome,<%= @user.name %></h2>
-<h2>you can create your post now</h2>
+<h2>Welcome, <%= @user.name %></h2>
+<h2>create new post</h2>
 <%= link_to 'create new post', new_post_path(@post) %><br>
-<h2>chat with someone in the chatroom</h2>
-<%= link_to 'go to chatroom', chats_path %>
+<h2>chat with someone</h2>
+<%= link_to 'go to chatroom', chats_path %><br>
+<br>
+<%= link_to 'go back to create account',  new_user_path(@user) %>
+</br>

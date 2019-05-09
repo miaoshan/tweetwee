@@ -12,6 +12,10 @@ class ChatsController < ApplicationController
     # byebug
   end
 
+  def edit
+    @chat = Chat.find(params[:id])
+  end
+
   def create
     @chat = chat.create(chat_params)
     @chat.save
