@@ -14,7 +14,7 @@ Chat.destroy_all
   User.create(name: Faker::Name.name)
 end
 
-100.times do
+20.times do
   Post.create(title: Faker::Lorem.sentence(3), text: Faker::Lorem.characters(20), user_id: User.all.sample.id)
 end
 

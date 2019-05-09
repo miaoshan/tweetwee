@@ -5,11 +5,9 @@
   <% end %>
   <h3>Posted by <%= @post.user.name %></h3>
   <h3>Most active user is <%= User.most_active_user %></h3>
-
-
-
-
+  <h3>Most commented user is <%= User.most_commented_user %></h3>
 <br><%= link_to 'edit post', edit_post_path(@post) %></br>
 <br><%= link_to 'leave comment', new_comment_path(:post_id => @post.id, :user_id => @post.user_id) %></br>
+<br><%= link_to 'go to chatroom', chats_path %><br>
 <br><%= link_to 'go back to create new post', new_post_path(@post) %></br>
-<br><%= link_to 'go back to create new user', new_user_path(@user) %></br>
+<br><%= link_to 'go back to create new account', new_user_path(@user) %></br>

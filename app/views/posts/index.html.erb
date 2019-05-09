@@ -1,6 +1,11 @@
 <h1>all posts</h1>
+
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post %></h2>
   <h3><%= link_to post.text, post %></h3>
   <h3>Posted by <%= post.user.name %></h3>
 <%end %>
+<br><%= link_to 'go back to create account',  new_user_path(@user) %></br>
+
+<br><%= link_to 'create new post', new_post_path(@post) %></br>
+<br><%= link_to 'go to chatroom', chats_path %></br>

@@ -17,14 +17,22 @@ class ChatsController < ApplicationController
   end
 
   def create
-    @chat = chat.create(chat_params)
+    @chat = Chat.create(chat_params)
     @chat.save
     redirect_to chats_path(@chat)
    end
 
-   #def messages
+   def update
+     @chat = Chat.find(params[:id])
+     @chat.update(chat_params)
+     redirect_to chat_path(@chat)
+   end
 
-   #end
+   def destroy
+     @chat = Chat.find_by_id(params[:id])
+      @chat.destroy
+      redirect_to chats_path
+   end
 
 private
 

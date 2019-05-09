@@ -1,6 +1,8 @@
-<h1>All chatrooms</h1>
+<h2>All chatrooms</h2>
 
 <% @chats.each do |c| %>
 <h2>chatroom name:<%= link_to c.name, chat_path(c)%></h2>
 <h2>topic:<%=c.topic %></h2>
 <%end%>
+<br><%= link_to 'go back to create new account', new_user_path(@user) %></br>
+<br><%= link_to 'go back to create new post', new_post_path(@post) %></br>

@@ -10,8 +10,9 @@ class User < ApplicationRecord
   end
 
   def comment_count
-    self.comment.length
+    self.comments.length
   end
+
 
   def self.most_active_user
      most_active = User.all.max_by{|x|x.post_count}
@@ -19,10 +20,11 @@ class User < ApplicationRecord
   end
 
   def self.most_commented_user
-    most_comment= User.all.max_by{|x|x.comment_count}
+    most_comment = User.all.max_by{|x|x.comment_count}
     most_comment.name
-
   end
+
+
 
 
 end
