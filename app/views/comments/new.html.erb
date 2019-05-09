@@ -1,0 +1,13 @@
+<h1>create comment</h1>
+<%= form_for @comment do |f| %>
+<p>
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+    <%= f.label :test %>
+    <%= f.text_field :test %>
+  <%= f.hidden_field :post_id, value: params["post_id"] %>
+  <%= f.hidden_field :user_id, value: params["user_id"] %>
+  <%= f.submit "submit" %>
+</p>
+<%end%>

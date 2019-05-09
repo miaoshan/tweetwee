@@ -1,0 +1,7 @@
+<h2>chatroom: <%= @chat.name %></h2>
+<h2>topic: <%= @chat.topic %></h2>
+<% @chat.users.each do |user|  %>
+  <p><%= user.name %></p>
+<% end %>
+<%= link_to 'add chatroom with topic', edit_chat_path(@chat) %><br>
+<%= link_to 'go back', chats_path %><br>

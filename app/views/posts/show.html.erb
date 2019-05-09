@@ -1,0 +1,10 @@
+<h2>post title: <%= @post.title %></h2>
+<h3>post: <%= @post.text %></h3>
+<% @comments.each do |comment| %>
+  <%= comment.name %>
+  <%= comment.test %>
+  <br>
+  <% end %>
+<%= link_to 'edit post', edit_post_path(@post) %><br>
+<%= link_to 'go back', posts_path %><br>
+<%= link_to 'leave comment', new_comment_path(:post_id => @post.id, :user_id => @post.user_id) %>

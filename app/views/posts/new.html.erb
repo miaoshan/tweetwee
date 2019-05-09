@@ -1,0 +1,24 @@
+<h1>Compose new post</h1>
+<%= form_for @post do |f| %>
+
+<% if flash[:errors] %>
+<% flash[:errors].each do |post| %>
+<%=post %>
+<%end%>
+<%end%>
+<p>
+  <br>
+  <%= f.label :user %>
+  <%= f.collection_select(:user_id, @users, :id, :name) %>
+  </br>
+  <br>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </br>
+  <br>
+  <%= f.label :text %>
+  <%= f.text_area :text %>
+  </br>
+  <%= f.submit "post" %>
+</p>
+<%end%>

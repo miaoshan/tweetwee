@@ -1,0 +1,14 @@
+<h2>edit post</h2>
+  <%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+
+  <%= f.submit %>
+<% end %>
+
+ <%= form_tag post_path(@post), method: "delete" do %>
+ <%= submit_tag "Delete post" %>
+ <%end%>
